@@ -1,6 +1,6 @@
 require "bundler/setup"
 require "thumbor_helpers"
-
+require "simplecov"
 SimpleCov.start 'rails' do
   add_filter 'spec/'
 end
