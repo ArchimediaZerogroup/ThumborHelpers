@@ -1,10 +1,10 @@
 require "thumbor_helpers/version"
 require "thumbor_helpers/config"
 require "thumbor_helpers/alchemy_overrides/picture"
+require "thumbor_helpers/railtie" if defined?(Rails::Railtie)
 
 module ThumborHelpers
   class Error < StandardError; end
-
 
   @@config = ThumborHelpers::Config.new
 

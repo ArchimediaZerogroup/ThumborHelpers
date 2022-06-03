@@ -6,6 +6,8 @@ module ThumborHelpers
     ##
     # Identifica l'host di thumbor
     # @return [String]
+    # ES:
+    # https://thumbor.archimedianet.it
     attr_accessor :server_url
 
     ##

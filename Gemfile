@@ -1,7 +1,6 @@
 source "https://rubygems.org"
 
-# Specify your gem's dependencies in thumbor_helpers.gemspec
-gemspec
+
 
 gem "rake", "~> 12.0"
 gem "rspec", "~> 3.0"
@@ -27,3 +26,5 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 gem 'alchemy_cms'
 gem 'alchemy-devise'
 
+# Specify your gem's dependencies in thumbor_helpers.gemspec
+gemspec

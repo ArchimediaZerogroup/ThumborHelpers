@@ -1,5 +1,7 @@
 module ThumborHelpers
   module AlchemyOverrides
+    ##
+    # Override della classe picture di Alchemy
     module Picture
 
       def url(options = {})
@@ -7,7 +9,7 @@ module ThumborHelpers
 
         if ThumborHelpers.config.enabled?
           #TODO definire come andare a ricercare il dominio del sito, con il config è un poco limitato
-          "https://#{ThumborHelpers.config.server_url}/unsafe/#{CGI.escape("#{ThumborHelpers.config.image_root_host}#{url}")}"
+          "#{ThumborHelpers.config.server_url}/unsafe/#{CGI.escape("#{ThumborHelpers.config.image_root_host}#{url}")}"
         else
           url
         end
