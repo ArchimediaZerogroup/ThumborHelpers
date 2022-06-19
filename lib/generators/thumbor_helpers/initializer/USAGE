@@ -1,0 +1,8 @@
+Description:
+    Create the initializer for configuration of the plugin
+
+Example:
+    bin/rails generate thumbor_helpers:initializer
+
+    This will create:
+        config/initializers/thumbor_helpers.rb
