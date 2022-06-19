@@ -4,6 +4,7 @@ RSpec.describe 'ThumborHelpers::AlchemyOverrides::Picture' do
   before(:each) do
     ThumborHelpers.setup do |c|
       c.enabled = enabled
+      c.security_key = "1234567890123456"
       c.server_url = "https://thumbor.domain.tld"
       c.image_root_host = "http://domain.tld"
     end
@@ -36,7 +37,7 @@ RSpec.describe 'ThumborHelpers::AlchemyOverrides::Picture' do
     let(:enabled) { true }
     it "ritorna la versione con thumbor " do
 
-      expect(override.url).to be == "https://thumbor.domain.tld/unsafe/#{CGI.escape("http://domain.tld/picture/image.jpg")}"
+      expect(override.url).to be == "https://thumbor.domain.tld/t_FPAjHhr3vAmKqOMt3qTmFkWJg=/#{CGI.escape("http://domain.tld/picture/image.jpg")}"
 
     end
 

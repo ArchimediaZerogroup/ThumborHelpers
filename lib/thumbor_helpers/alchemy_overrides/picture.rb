@@ -8,8 +8,9 @@ module ThumborHelpers
         url = super(options)
 
         if ThumborHelpers.config.enabled?
-          #TODO definire come andare a ricercare il dominio del sito, con il config è un poco limitato
-          "#{ThumborHelpers.config.server_url}/unsafe/#{CGI.escape("#{ThumborHelpers.config.image_root_host}#{url}")}"
+          escaped = CGI.escape("#{ThumborHelpers.config.image_root_host}#{url}")
+          encrypted_request = ThumborHelpers.config.cripto_generator.generate(image: escaped)
+          "#{ThumborHelpers.config.server_url}#{encrypted_request}"
         else
           url
         end

@@ -25,7 +25,7 @@ module ThumborHelpers
     # @return [String]
     attr_accessor :image_root_host
 
-    attr_reader :thumbor
+    attr_reader :cripto_generator
 
     def initialize
       @enabled = false
@@ -33,7 +33,7 @@ module ThumborHelpers
     end
 
     def reconfigure_thumbor
-      @thumbor = Thumbor::CryptoURL.new(@security_key)
+      @cripto_generator = Thumbor::CryptoURL.new(@security_key)
       nil
     end
 
