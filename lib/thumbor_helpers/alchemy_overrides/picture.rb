@@ -1,7 +1,7 @@
 module ThumborHelpers
   module AlchemyOverrides
     ##
-    # Override della classe picture di Alchemy
+    # Override Alchemy::Picture
     module Picture
 
       def url(options = {})
