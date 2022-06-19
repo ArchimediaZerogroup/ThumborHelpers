@@ -4,7 +4,7 @@ A collection of helpers/overrides to simplify live for use thumbor with rails an
 The concept is to install the gem in a project and without change of code have access 
 to features of thumbor.
 
-
+Thumbor documentation: https://thumbor.readthedocs.io/en/latest/index.html
 
 ## Installation
 
