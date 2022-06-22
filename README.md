@@ -33,7 +33,7 @@ TODO: Write usage instructions here
 Start a thumbor server with the command:
 
 ```shell
-docker run --network host -e THUMBOR_PORT=8888 -e SECURITY_KEY='1234567890123456' -e ALLOW_UNSAFE_URL=0  minimalcompact/thumbor thumbor
+docker run --network host -e THUMBOR_PORT=8888 -e SECURITY_KEY='1234567890123456' -e AUTO_WEBP='True' -e ALLOW_UNSAFE_URL='False'  minimalcompact/thumbor thumbor
 ```
 
 ## Version Release
