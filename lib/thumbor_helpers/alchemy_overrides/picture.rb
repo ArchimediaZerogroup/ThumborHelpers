@@ -5,9 +5,10 @@ module ThumborHelpers
     module Picture
 
       def url(options = {})
+        thumbor_disable = options.delete(:thumbor_disable) { false }
         url = super(options)
 
-        if ThumborHelpers.config.enabled?
+        if ThumborHelpers.config.enabled? and !thumbor_disable
           escaped = CGI.escape("#{ThumborHelpers.config.image_root_host}#{url}")
           encrypted_request = ThumborHelpers.config.cripto_generator.generate(image: escaped)
           "#{ThumborHelpers.config.server_url}#{encrypted_request}"

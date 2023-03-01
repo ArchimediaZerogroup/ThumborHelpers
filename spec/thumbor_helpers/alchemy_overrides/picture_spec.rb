@@ -41,6 +41,10 @@ RSpec.describe 'ThumborHelpers::AlchemyOverrides::Picture' do
 
     end
 
+    it "posso disabilitarlo tramite option nel metodo" do
+      expect(override.url(thumbor_disable:true)).to be == "/picture/image.jpg"
+    end
+
   end
 
 end
