@@ -26,7 +26,14 @@ Now go in config/initializers and configure the thumbors with the server creaden
 
 ## Usage
 
-TODO: Write usage instructions here
+When enabled the helpers replace de standard url method of picture and create the absolute url to work with and instance
+of thumbor.
+You can bypass globaly by setting in the configurations to disable thumbor, or you can pass to url an optional parameter
+to single disable thumbor.
+ES:
+```ruby
+record.picture.url(thumbor_disable:true)
+```
 
 ## Development
 
