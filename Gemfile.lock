@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    thumbor_helpers (0.1.1)
+    thumbor_helpers (0.2.0)
       ruby-thumbor (>= 4)
 
 GEM
