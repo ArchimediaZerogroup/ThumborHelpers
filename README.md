@@ -35,6 +35,13 @@ ES:
 record.picture.url(thumbor_disable:true)
 ```
 
+## Configurations WIP
+
+- allowed_image_extensions:
+  regexp to filter what type of images let thumbor elaborate.  
+  Default: `[/(.*\.jpe?g|.*\.png)/`
+
+
 ## Development
 
 Start a thumbor server with the command:
