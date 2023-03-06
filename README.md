@@ -47,7 +47,7 @@ record.picture.url(thumbor_disable:true)
 Start a thumbor server with the command:
 
 ```shell
-docker run --network host -e THUMBOR_PORT=8888 -e SECURITY_KEY='1234567890123456' -e AUTO_WEBP='True' -e ALLOW_UNSAFE_URL='False'  minimalcompact/thumbor thumbor
+docker run --network host -e THUMBOR_PORT=8888 -e SECURITY_KEY='1234567890123456' -e AUTO_WEBP='True' -e ALLOW_UNSAFE_URL='False'  beeyev/thumbor-s3:7.4-slim-alpine thumbor
 ```
 
 ## Version Release
