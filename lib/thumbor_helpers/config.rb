@@ -27,8 +27,14 @@ module ThumborHelpers
 
     attr_reader :cripto_generator
 
+    ##
+    # RegExp match to enable thumbor images
+    # @return [Regexp] -> default (.*\.jpe?g|.*\.png)
+    attr_accessor :allowed_image_extensions
+
     def initialize
       @enabled = false
+      @allowed_image_extensions = /(.*\.jpe?g|.*\.png)/
       reconfigure_thumbor
     end
 
